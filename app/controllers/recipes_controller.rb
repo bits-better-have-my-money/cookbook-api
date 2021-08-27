@@ -6,7 +6,15 @@ class RecipesController < ApplicationController
   end
 
   def create
-    render json: {message: "Creating a recipe...."}
+    recipe = Recipe.new(
+      title: params[:title], 
+      chef: params[:chef], 
+      ingredients: params[:ingredients], 
+      directions: params[:directions], 
+      prep_time: params[:prep_time]
+    )
+    recipe.save
+    render json: recipe.as_json
   end
 
   def show

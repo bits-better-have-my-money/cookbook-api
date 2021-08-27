@@ -9,4 +9,10 @@ GET http://localhost:3000/recipes/2
 POST http://localhost:3000/recipes
 Content-Type: application/json
 
-{}
+{
+  "title": "Green Eggs and Ham",
+  "chef": "Dr. Seuss",
+  "ingredients": "Green Eggs, Ham",
+  "directions": "I don't actually want them",
+  "prep_time": 15
+}
