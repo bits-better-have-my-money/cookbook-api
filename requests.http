@@ -16,3 +16,12 @@ Content-Type: application/json
   "directions": "I don't actually want them",
   "prep_time": 15
 }
+
+###
+
+PATCH http://localhost:3000/recipes/9
+Content-Type: application/json
+
+{
+  "title": "Stawberry Jam"
+}
