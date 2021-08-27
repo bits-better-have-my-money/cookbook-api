@@ -1,0 +1,12 @@
+GET http://localhost:3000/recipes
+
+###
+
+GET http://localhost:3000/recipes/2
+
+###
+
+POST http://localhost:3000/recipes
+Content-Type: application/json
+
+{}
