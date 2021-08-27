@@ -33,4 +33,10 @@ class RecipesController < ApplicationController
     render json: recipe.as_json
   end
 
+  def destroy
+    recipe = Recipe.find(params[:id])
+    recipe.destroy
+    render json: {message: "Recipe successfully destroyed"}
+  end
+
 end
