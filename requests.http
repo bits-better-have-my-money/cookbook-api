@@ -19,11 +19,11 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:3000/recipes/9
+PATCH http://localhost:3000/recipes/10
 Content-Type: application/json
 
 {
-  "title": "Stawberry Jam"
+  "prep_time": 30
 }
 
 ###
