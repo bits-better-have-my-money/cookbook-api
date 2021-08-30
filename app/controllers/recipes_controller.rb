@@ -19,7 +19,7 @@ class RecipesController < ApplicationController
 
   def show
     recipe = Recipe.find(params[:id])
-    render json: recipe.as_json
+    render json: recipe.as_json({methods: [:ingredients_list, :directions_list, :friendly_created_at, :friendly_prep_time]})
   end
 
   def update
@@ -35,7 +35,7 @@ class RecipesController < ApplicationController
 
   def destroy
     recipe = Recipe.find(params[:id])
-    recipe.destroy
+    recipe.stroy
     render json: {message: "Recipe successfully destroyed"}
   end
 
