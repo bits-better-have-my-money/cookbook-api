@@ -12,10 +12,10 @@ class RecipesController < ApplicationController
   def create
     recipe = Recipe.new(
       title: params[:title], 
-      chef: params[:chef], 
       ingredients: params[:ingredients], 
       directions: params[:directions], 
-      prep_time: params[:prep_time]
+      prep_time: params[:prep_time],
+      user_id: current_user.id
     )
     recipe.save
     render json: recipe
@@ -29,7 +29,6 @@ class RecipesController < ApplicationController
   def update
     recipe = Recipe.find(params[:id])
     recipe.title = params[:title] || recipe.title
-    recipe.chef = params[:chef] || recipe.chef
     recipe.ingredients = params[:ingredients] || recipe.ingredients
     recipe.directions = params[:directions] || recipe.directions
     recipe.prep_time = params[:prep_time] || recipe.prep_time

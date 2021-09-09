@@ -9,10 +9,10 @@ GET http://localhost:3000/recipes/14
 
 POST http://localhost:3000/recipes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzEzMDA4OTR9.9cCQ4TAg8XHoLAtU4yLoEH4skz_uuxpJn4wg7KdUr2Y
 
 {
   "title": "Green Eggs and Ham",
-  "chef": "Dr. Seuss",
   "ingredients": "Green Eggs, Ham",
   "directions": "I don't actually want them",
   "prep_time": 15
