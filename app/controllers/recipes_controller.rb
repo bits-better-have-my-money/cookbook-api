@@ -1,8 +1,12 @@
 class RecipesController < ApplicationController
 
   def index
-    recipes = Recipe.all
-    render json: recipes
+    if current_user
+      recipes = Recipe.all
+      render json: recipes
+    else
+      render json: {message: "You must be logged in to do that."}
+    end
   end
 
   def create
