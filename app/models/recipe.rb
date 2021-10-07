@@ -1,6 +1,7 @@
 class Recipe < ApplicationRecord
 
   belongs_to :user
+  validates :title, presence: true
 
   # instance method/model method
   def ingredients_list
