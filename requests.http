@@ -1,15 +1,17 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzM3MjA2MzZ9.h01UysvkOJrW-I6LKlQN4tEh3lVEp9cH-d7ACMQG2GE
+
 ### Recipes Index
 GET http://localhost:3000/recipes
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzEzMDA4OTR9.9cCQ4TAg8XHoLAtU4yLoEH4skz_uuxpJn4wg7KdUr2Y
+Authorization: Bearer {{jwt}}
 
 ### Recipes Show
 GET http://localhost:3000/recipes/14
-
+# Authorization: Bearer {{jwt}}
 ###
 
 POST http://localhost:3000/recipes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzEzMDA4OTR9.9cCQ4TAg8XHoLAtU4yLoEH4skz_uuxpJn4wg7KdUr2Y
+Authorization: Bearer {{jwt}}
 
 {
   "title": "Green Eggs and Ham",
@@ -48,6 +50,6 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "zia@gmail.com",
+  "email": "ace@gmail.com",
   "password": "password"
 }
