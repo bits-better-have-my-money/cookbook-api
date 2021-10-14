@@ -1,8 +1,7 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzM3MjA2MzZ9.h01UysvkOJrW-I6LKlQN4tEh3lVEp9cH-d7ACMQG2GE
 
 ### Recipes Index
-GET http://localhost:3000/recipes
-Authorization: Bearer {{jwt}}
+GET http://localhost:3000/recipes?search=licorice
 
 ### Recipes Show
 GET http://localhost:3000/recipes/14
