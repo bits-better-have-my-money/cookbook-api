@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzM3MjA2MzZ9.h01UysvkOJrW-I6LKlQN4tEh3lVEp9cH-d7ACMQG2GE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU4ODM4OTl9.m6J7FSbrUwKkOaM2CXlAxDsA3Qg5DOxVNnVn8EDXKho
 
 ### Recipes Index
 GET http://localhost:3000/recipes
@@ -51,4 +51,16 @@ Content-Type: application/json
 {
   "email": "ace@gmail.com",
   "password": "password"
+}
+
+### Messages Index
+GET http://localhost:3000/messages
+
+### Messages Create
+POST http://localhost:3000/messages
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "body": "I am the best cat in the house"
 }
